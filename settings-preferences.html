@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Setting Preferences</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="fonts/segoe/style.css" />
+  <link rel="stylesheet" href="css/multi-range-style.css" />
+</head>
+
+<body style="max-width: 450px; margin: 0 auto">
+  <!-- Start your project here-->
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-cus-blue">
+      <div class="container">
+        <div class="d-flex align-items-center">
+          <a class="navbar-brand" href="#"><img class="p-2" src="img/logo.png" alt="195" /></a>
+          <span class="sub-directory">/ settings</span>
+        </div>
+
+
+        <div class="d-flex ms-auto">
+          <a class="d-flex align-items-center hidden-arrow" href="profile-dashboard.html" id="navbarDropdownMenuAvatar"
+            role="button" data-mdb-toggle="" aria-expanded="false">
+            <img src="img/profile.png" class="profile-icon-sm mx-2" height="36" loading="lazy" />
+          </a>
+
+          <!-- Dropdown menu  -->
+          <div class="dropdown">
+            <button class="btn shadow-none px-2 ms-2" style="padding: 0 !important;" type="button"
+              id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-ellipsis-v text-white"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="settings-free.html">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Subscription</a></li>
+              <li>
+                <a class="dropdown-item" href="profile-transaction.html">Transactions</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Call History</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <main class="container-wrapper">
+
+    <div class="container profile-dashboard-wrapper d-flex flex-column position-relative">
+      <div class="content-header setting-free-header">
+        <h3>App settings - preferences</h3>
+        <p>View all app settings <a href="#" class="text-decoration-underline"><strong>here.</strong></a></p>
+      </div>
+      <div class="blue-underline"></div>
+
+      <div class="row gy-2">
+        <div class="col-6">
+          <div class="mb-3">
+            <h3 class="heading-2b">Exclude gender</h3>
+            <p class="paratext-1l">Check to <strong>exclude</strong></p>
+          </div>
+          <div>
+            <input type="checkbox" id="sp-1">
+            <label class="form-check-label selected-semibold-text" for="sp-1">Man</label>
+          </div>
+          <div>
+            <input type="checkbox" checked id="sp-2">
+            <label class="form-check-label selected-semibold-text" for="sp-2">Woman</label>
+          </div>
+          <div>
+            <input type="checkbox" id="sp-3">
+            <label class="form-check-label selected-semibold-text" for="sp-3">Lesbian</label>
+          </div>
+          <div>
+            <input type="checkbox" id="sp-4">
+            <label class="form-check-label selected-semibold-text" for="sp-4">Gay</label>
+          </div>
+          <div>
+            <input type="checkbox" checked id="sp-5">
+            <label class="form-check-label selected-semibold-text" for="sp-5">Clowns</label>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="mb-3">
+            <h3 class="heading-2b">Exclude ethnic</h3>
+            <p class="paratext-1l">Check to <strong>exclude</strong></p>
+          </div>
+          <div>
+            <input type="checkbox" id="sp-6">
+            <label class="form-check-label selected-semibold-text" for="sp-6">Black</label>
+          </div>
+          <div>
+            <input type="checkbox" checked id="sp-7">
+            <label class="form-check-label selected-semibold-text" for="sp-7">White</label>
+          </div>
+          <div>
+            <input type="checkbox" checked id="sp-8">
+            <label class="form-check-label selected-semibold-text" for="sp-8">Green</label>
+          </div>
+          <div>
+            <input type="checkbox" checked id="sp-9">
+            <label class="form-check-label selected-semibold-text" for="sp-9">Purple</label>
+          </div>
+          <div>
+            <input type="checkbox" id="sp-10">
+            <label class="form-check-label selected-semibold-text" for="sp-10">Blue</label>
+          </div>
+        </div>
+      </div>
+      <div class="blue-underline mt-3"></div>
+
+      <div class="mb-3">
+        <h3 class="heading-2b">Age</h3>
+        <p class="paratext-1l">A subtitle that explains, e.g. the amount in years</p>
+        <div class="my-3">
+          <div class="multi-ranges-basic"></div>
+          <div class="slider">
+            <input type="range" class="input-left" min="0" max="100" value="20">
+            <input type="range" class="input-right" min="0" max="100" value="60">
+            <div class="range_bg"></div>
+            <div class="thumb left">
+              <span class="value"></span>
+            </div>
+            <div class="thumb right">
+              <span class="value"></span>
+            </div>
+          </div>
+
+        </div>
+        <h3 class="heading-2b mt-4">Distance</h3>
+        <p class="paratext-1l">Another subtitle, e.g. the amount in kilometers</p>
+        <div class="my-3">
+          <div class="slider">
+            <input type="range" class="input-left" min="0" max="100" value="20">
+            <input type="range" class="input-right" min="0" max="100" value="80">
+            <div class="range_bg"></div>
+            <div class="thumb left">
+              <span class="value"></span>
+            </div>
+            <div class="thumb right">
+              <span class="value"></span>
+            </div>
+          </div>
+
+        </div>
+        <h3 class="heading-2b mt-4">Reputation</h3>
+        <p class="paratext-1l">The explanation of this item, e.g. the reputation score</p>
+        <div class="my-3">
+          <div class="slider">
+            <input type="range" class="input-left" min="0" max="100" value="20">
+            <input type="range" class="input-right" min="0" max="100" value="80">
+            <div class="range_bg"></div>
+            <div class="thumb left">
+              <span class="value"></span>
+            </div>
+            <div class="thumb right">
+              <span class="value"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="profile-dashboard.html" class="d-flex">
+        <button type="button" class="btn btn-primary bg-cus-blue mt-4 ms-auto">
+          <i class="fas fa-check me-2"></i>
+          Save
+        </button>
+      </a>
+    </div>
+    </div>
+  </main>
+  <footer class="bg-cus-blue setting-preferences" style="margin: 0 auto; max-width: 450px;">
+    <div class="container">
+      <div class="container">
+        <div class="row">
+          <div class="col footer-tab text-center">
+            <a href="index-with-data.html">
+              <i class="fas fa-home"></i>
+              <p>Home</p>
+            </a>
+          </div>
+          <div class="col footer-tab text-center">
+            <a href="chat-overview.html">
+              <i class="far fa-comment-dots"></i>
+              <span class="badge rounded-pill badge-notification bg-white">9</span>
+              <p>Chat</p>
+            </a>
+          </div>
+          <div class="col footer-tab text-center">
+            <a href="booking-actions.html">
+              <i class="far fa-bookmark"></i>
+              <span class="badge rounded-pill badge-notification bg-white">134</span>
+              <p>Bookings</p>
+            </a>
+          </div>
+          <div class="col footer-tab text-center">
+            <a href="profile-dashboard.html">
+              <i class="far fa-user"></i>
+              <p>Profile</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+  <script src="js/multi-range.js"></script>
+</body>
+
+</html>
