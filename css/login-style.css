@@ -1,0 +1,136 @@
+.singUp-main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/login-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.singUp-content {
+    margin: auto;
+    width: 450px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    box-shadow: 0 4px 19px 0 rgb(0 0 0 / 26%), 0 2px 20px rgb(0 0 0 / 22%);
+}
+
+.singUp-content h1 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.singUp-content .row {
+    margin-top: 24px;
+    min-height: 66px;
+}
+.singUp-content .col{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.singUp-content textarea,
+.singUp-content input {
+    border: 2px solid #027bfe !important;
+    border-radius: 8px;
+    resize: none;
+}
+
+.singUp-content input[type="checkbox"] {
+    top: -2px;
+    position: relative;
+}
+
+.singUp-content textarea::-webkit-inner-spin-button,
+.singUp-content input::-webkit-inner-spin-button {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.singUp-content .form-outline .form-control~.form-notch .form-notch-leading,
+.singUp-content .form-outline .form-control~.form-notch .form-notch-middle,
+.singUp-content .form-outline .form-control~.form-notch .form-notch-trailing {
+    border: none;
+    box-shadow: none;
+}
+
+.singUp-content .form-outline .form-control~.form-label {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    background-color: white;
+    padding-top: 0.35rem;
+    top: 2px;
+}
+
+.singUp-content .alert {
+    font-family: "Segoe UI Regular";
+    font-size: 24px;
+    color: #027bfe;
+    background-color: rgba(2, 123, 254, .2);
+    text-align: center;
+}
+
+.singUp-content button {
+    width: auto;
+    margin: 0 auto;
+}
+
+.words-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 12px 0;
+}
+
+.words-content .col-md-4 {
+    width: 31%;
+    margin: 12px 0;
+}
+
+.choose-page a {
+    width: 48%;
+}
+
+.btn-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.ring-1 {
+    width: 10px;
+    height: 10px;
+    padding: 10px;
+    border: 7px dashed #4b9cdb;
+    border-radius: 100%;
+    animation: loadingD 1.5s 0.3s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;
+}
+
+@keyframes loadingD {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.hide
+{
+    display: none;
+}

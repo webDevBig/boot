@@ -1,72 +1,40 @@
- // Get all the slider elements
- var sliders = document.querySelectorAll(".slider");
+ const onInput = (parent, e) => {
+     const slides = parent.querySelectorAll('input');
+     const min = parseFloat(slides[0].min);
+     const max = parseFloat(slides[0].max);
 
- // Loop through each slider and initialize the values and event listeners
- sliders.forEach(function (slider) {
-     var inputLeft = slider.querySelector(".input-left");
-     var inputRight = slider.querySelector(".input-right");
-     var thumbLeft = slider.querySelector(".thumb.left");
-     var thumbRight = slider.querySelector(".thumb.right");
-     var range = slider.querySelector(".range_bg");
+     let slide1 = parseFloat(slides[0].value);
+     let slide2 = parseFloat(slides[1].value);
 
-     var thumbLeft_value = slider.querySelector(".thumb.left .value");
-     var thumbRight_value = slider.querySelector(".thumb.right .value");
+     const percentageMin = (slide1 / (max - min)) * 100;
+     const percentageMax = (slide2 / (max - min)) * 100;
 
-     function setLeftValue() {
-         var min = parseInt(inputLeft.min);
-         var max = parseInt(inputLeft.max);
+     parent.style.setProperty('--range-slider-value-low', percentageMin);
+     parent.style.setProperty('--range-slider-value-high', percentageMax);
 
-         inputLeft.value = Math.min(parseInt(inputLeft.value), parseInt(inputRight.value) - 1);
+     if (slide1 > slide2) {
+         const tmp = slide2;
+         slide2 = slide1;
+         slide1 = tmp;
 
-         var percent = ((inputLeft.value - min) / (max - min)) * 100;
-
-         thumbLeft.style.left = percent + "%";
-         range.style.left = percent + "%";
-         thumbLeft_value.innerHTML = parseInt(percent);
+         if (e?.currentTarget === slides[0]) {
+             slides[0].insertAdjacentElement('beforebegin', slides[1]);
+         } else {
+             slides[1].insertAdjacentElement('afterend', slides[0]);
+         }
      }
-     setLeftValue();
 
-     function setRightValue() {
-         var min = parseInt(inputRight.min);
-         var max = parseInt(inputRight.max);
+     parent.querySelector('.multi-slider__display').setAttribute('data-low', slide1);
+     parent.querySelector('.multi-slider__display').setAttribute('data-high', slide2);
+ }
 
-         inputRight.value = Math.max(parseInt(inputRight.value), parseInt(inputLeft.value) + 1);
-
-         var percent = ((inputRight.value - min) / (max - min)) * 100;
-
-         thumbRight.style.right = (100 - percent) + "%";
-         range.style.right = (100 - percent) + "%";
-
-         thumbRight_value.innerHTML = parseInt(percent);
-     }
-     setRightValue();
-
-     inputLeft.addEventListener("input", setLeftValue);
-     inputRight.addEventListener("input", setRightValue);
-
-     inputLeft.addEventListener("mouseover", function () {
-         thumbLeft.classList.add("hover");
-     });
-     inputLeft.addEventListener("mouseout", function () {
-         thumbLeft.classList.remove("hover");
-     });
-     inputLeft.addEventListener("mousedown", function () {
-         thumbLeft.classList.add("active");
-     });
-     inputLeft.addEventListener("mouseup", function () {
-         thumbLeft.classList.remove("active");
-     });
-
-     inputRight.addEventListener("mouseover", function () {
-         thumbRight.classList.add("hover");
-     });
-     inputRight.addEventListener("mouseout", function () {
-         thumbRight.classList.remove("hover");
-     });
-     inputRight.addEventListener("mousedown", function () {
-         thumbRight.classList.add("active");
-     });
-     inputRight.addEventListener("mouseup", function () {
-         thumbRight.classList.remove("active");
-     });
+ addEventListener('DOMContentLoaded', (event) => {
+     document.querySelectorAll('.multi-slider')
+         .forEach(range => range.querySelectorAll('input')
+             .forEach((input) => {
+                 if (input.type === 'range') {
+                     input.oninput = (e) => onInput(range, e);
+                     onInput(range);
+                 }
+             }))
  });

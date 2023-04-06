@@ -18,7 +18,6 @@
   <link rel="stylesheet" href="css/mdb.min.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="fonts/segoe/style.css" />
-  <link rel="stylesheet" href="css/multi-range-style.css" />
 </head>
 
 <body style="max-width: 450px; margin: 0 auto">
@@ -131,49 +130,29 @@
         <h3 class="heading-2b">Age</h3>
         <p class="paratext-1l">A subtitle that explains, e.g. the amount in years</p>
         <div class="my-3">
-          <div class="multi-ranges-basic"></div>
-          <div class="slider">
-            <input type="range" class="input-left" min="0" max="100" value="20">
-            <input type="range" class="input-right" min="0" max="100" value="60">
-            <div class="range_bg"></div>
-            <div class="thumb left">
-              <span class="value"></span>
-            </div>
-            <div class="thumb right">
-              <span class="value"></span>
-            </div>
+          <div class="multi-slider">
+            <input type="range" min="0" max="300" step="1" value="0" class="multi-slider__input" />
+            <input type="range" min="0" max="300" step="1" value="100" class="multi-slider__input" />
+            <div class="multi-slider__display"></div>
           </div>
 
         </div>
         <h3 class="heading-2b mt-4">Distance</h3>
         <p class="paratext-1l">Another subtitle, e.g. the amount in kilometers</p>
         <div class="my-3">
-          <div class="slider">
-            <input type="range" class="input-left" min="0" max="100" value="20">
-            <input type="range" class="input-right" min="0" max="100" value="80">
-            <div class="range_bg"></div>
-            <div class="thumb left">
-              <span class="value"></span>
-            </div>
-            <div class="thumb right">
-              <span class="value"></span>
-            </div>
+          <div class="multi-slider">
+            <input type="range" min="0" max="700" step="1" value="30" class="multi-slider__input" />
+            <input type="range" min="0" max="700" step="1" value="100" class="multi-slider__input" />
+            <div class="multi-slider__display"></div>
           </div>
-
         </div>
         <h3 class="heading-2b mt-4">Reputation</h3>
         <p class="paratext-1l">The explanation of this item, e.g. the reputation score</p>
         <div class="my-3">
-          <div class="slider">
-            <input type="range" class="input-left" min="0" max="100" value="20">
-            <input type="range" class="input-right" min="0" max="100" value="80">
-            <div class="range_bg"></div>
-            <div class="thumb left">
-              <span class="value"></span>
-            </div>
-            <div class="thumb right">
-              <span class="value"></span>
-            </div>
+          <div class="multi-slider">
+            <input type="range" min="0" max="700" step="1" value="0" class="multi-slider__input" />
+            <input type="range" min="0" max="700" step="1" value="300" class="multi-slider__input" />
+            <div class="multi-slider__display"></div>
           </div>
         </div>
       </div>

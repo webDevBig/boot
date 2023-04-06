@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Sing Up</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="fonts/segoe/style.css" />
+
+    <link rel="stylesheet" href="css/login-style.css" />
+</head>
+
+<body>
+    <div class="singUp-main">
+        <form class="singUp-content">
+            <h1>Create an account</h1>
+            <div class="alert" role="alert">
+                <!-- <i class="fas fa-exclamation-triangle me-3"></i> -->
+                Please, write down this number and 9 words in the correct order!
+            </div>
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="ring-1" id="loader-animation"></div>
+                    <div class="form-outline">
+                        <textarea class="form-control hide"
+                            id="generateCode">19 word1 word2 word3 word4 word5 word6 word7 word8 word9</textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-check d-flex justify-content-center mb-4">
+                <input type="checkbox" id="agreeCheck">
+                <label class="form-check-label selected-semibold-text" for="agreeCheck">Yes, I write everything
+                    down</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign up</button>
+        </form>
+    </div>
+
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+
+    <script>
+        function addClass() {
+            document.getElementById('generateCode').classList.remove('hide')
+            document.getElementById('loader-animation').classList.add('hide')
+        }
+        setTimeout(addClass, 30000);
+    </script>
+
+<!-- https://www.freepik.com/free-vector/gradient-dynamic-blue-lines-background_15151445.htm#query=background&position=6&from_view=search&track=sph -->
+
+</body>
+
+</html>
