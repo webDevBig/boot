@@ -9,6 +9,9 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+.singUp-main .form-check{
+    align-items: center;
+}
 
 .singUp-content {
     margin: auto;
@@ -41,11 +44,6 @@
     border: 2px solid #027bfe !important;
     border-radius: 8px;
     resize: none;
-}
-
-.singUp-content input[type="checkbox"] {
-    top: -2px;
-    position: relative;
 }
 
 .singUp-content textarea::-webkit-inner-spin-button,
@@ -106,7 +104,6 @@
     align-items: center;
     justify-content: space-between;
 }
-
 
 .ring-1 {
     width: 10px;
