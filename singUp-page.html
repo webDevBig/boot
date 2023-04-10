@@ -25,27 +25,32 @@
 
 <body>
     <div class="singUp-main">
-        <form class="singUp-content">
-            <h1>Create an account</h1>
-            <div class="alert" role="alert">
-                <!-- <i class="fas fa-exclamation-triangle me-3"></i> -->
-                Please, write down this number and 9 words in the correct order!
-            </div>
-            <div class="row mb-4">
-                <div class="col">
-                    <div class="ring-1" id="loader-animation"></div>
-                    <div class="form-outline">
-                        <p class="hide generateCode" id="generateCode" disabled>19 word1 word2 word3 word4 word5 word6 word7 word8 word9</p>
+        <div class="content">
+            <form class="singUp-content">
+                <h1>Create an account</h1>
+                <div class="alert" role="alert">
+                    <!-- <i class="fas fa-exclamation-triangle me-3"></i> -->
+                    Please, write down this number and 9 words in the correct order!
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <div class="ring-1" id="loader-animation"></div>
+                        <div class="form-outline">
+                            <textarea class="form-control hide"
+                                id="generateCode">19 word1 word2 word3 word4 word5 word6 word7 word8 word9</textarea>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="form-check d-flex justify-content-center mb-4">
-                <input type="checkbox" id="agreeCheck">
-                <label class="form-check-label selected-semibold-text" for="agreeCheck">Yes, I write everything
-                    down</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Sign up</button>
-        </form>
+
+                <div class="form-check d-flex justify-content-center mb-4">
+                    <input type="checkbox" id="agreeCheck">
+                    <label class="form-check-label selected-semibold-text" for="agreeCheck">Yes, I write everything
+                        down</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign up</button>
+            </form>
+        </div>
+
     </div>
 
 
@@ -53,15 +58,16 @@
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Custom scripts -->
     <script type="text/javascript"></script>
+
     <script>
         function addClass() {
             document.getElementById('generateCode').classList.remove('hide')
             document.getElementById('loader-animation').classList.add('hide')
         }
-        setTimeout(addClass, 3000);
+        setTimeout(addClass, 30000);
     </script>
 
-<!-- https://www.freepik.com/free-vector/gradient-dynamic-blue-lines-background_15151445.htm#query=background&position=6&from_view=search&track=sph -->
+    <!-- https://www.freepik.com/free-vector/gradient-dynamic-blue-lines-background_15151445.htm#query=background&position=6&from_view=search&track=sph -->
 
 </body>
 

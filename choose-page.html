@@ -23,14 +23,54 @@
 </head>
 
 <body>
+
   <div class="singUp-main choose-page">
-    <form class="singUp-content">
-      <h1>New member <br /> or <br /> Account recovery?</h1>
-      <div class="btn-box">
-        <a href="singUp-page.html" class="btn btn-primary">Sign up</a>
-        <a href="recovery-page.html" class="btn btn-primary">Recover you account</a>
-      </div>
-    </form>
+    <div class="content">
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-cus-blue">
+          <div class="container">
+            <div class="d-flex align-items-center">
+              <a class="navbar-brand" href="#"><img class="p-2" src="img/logo.png" alt="195" /></a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <form class="singUp-content">
+        <div class="content-header setting-free-header">
+          <h3>Create a new account</h3>
+          <p>Because of privacy, we don't want your <br/> phonenumber or e-mail. Curious how we work?</p>
+          <a href="singUp-page.html">
+            <button type="button" class="btn btn-outline-info recover-btn d-flex align-items-center"
+              data-mdb-ripple-color="dark">
+              <i class="fa-solid fa-user-plus"></i>
+              <span class="btn-text">Sign up</span>
+            </button>
+          </a>
+          <!-- <a href="singUp-page.html">
+            <button type="button" class="btn btn-outline-info recover-btn d-flex align-items-center"
+              data-mdb-ripple-color="dark">
+              <i class="fa-solid fa-arrow-right-to-bracket"></i>
+              <span class="btn-text">Sign up</span>
+            </button>
+          </a> -->
+        </div>
+        <br /> <br />
+
+        <div class="content-header setting-free-header">
+          <h3>Account recovery</h3>
+          <p>Lost your account or credentials? <br />
+            No worry, you can recover it.</p>
+          <a href="recovery-page.html">
+            <button type="button" class="btn btn-outline-info recover-btn d-flex align-items-center"
+              data-mdb-ripple-color="dark">
+              <i class="fas fa-shield"></i>
+              <span class="btn-text">Recover</span>
+            </button>
+          </a>
+        </div>
+      </form>
+    </div>
   </div>
 
   <!-- MDB -->

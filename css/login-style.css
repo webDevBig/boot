@@ -10,9 +10,30 @@
     background-repeat: no-repeat;
 }
 
-.singUp-main .form-check {
-    align-items: center;
+.singUp-main .content {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
+
+.singUp-main header {
+    width: 100%;
+}
+
+.singUp-main p {
+    font-family: "Segoe UI Regular";
+    color: #666666;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+
+.singUp-main h3 {
+    text-align: center;
+}
+
 
 .singUp-content {
     margin: auto;
@@ -41,20 +62,19 @@
     flex-direction: column;
 }
 
-.singUp-content .generateCode,
+.singUp-content textarea,
 .singUp-content input {
     border: 2px solid #027bfe !important;
     border-radius: 8px;
     resize: none;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.6;
-    color: #4f4f4f;
-    padding: 0.32rem 0.75rem;
-    font-family: "Roboto",sans-serif;
 }
 
+.singUp-content input[type="checkbox"] {
+    top: -2px;
+    position: relative;
+}
 
+.singUp-content textarea::-webkit-inner-spin-button,
 .singUp-content input::-webkit-inner-spin-button {
     appearance: none;
     -webkit-appearance: none;
@@ -112,6 +132,7 @@
     align-items: center;
     justify-content: space-between;
 }
+
 
 .ring-1 {
     width: 10px;
