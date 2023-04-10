@@ -12,6 +12,7 @@
 
 .singUp-main .content {
     max-width: 450px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -37,7 +38,7 @@
 
 .singUp-content {
     margin: auto;
-    width: 450px;
+    width: 100%;
     background-color: white;
     display: flex;
     flex-direction: column;
