@@ -42,7 +42,7 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    padding: 24px;
+    padding: 24px 10px;
     box-shadow: 0 4px 19px 0 rgb(0 0 0 / 26%), 0 2px 20px rgb(0 0 0 / 22%);
 }
 
