@@ -26,19 +26,29 @@
 <body>
     <div class="singUp-main">
         <div class="content">
+            <header>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-cus-blue">
+                    <div class="container">
+                        <div class="d-flex align-items-center">
+                            <a class="navbar-brand" href="#"><img class="p-2" src="img/logo.png" alt="195" /></a>
+                        </div>
+                    </div>
+                </nav>
+            </header>
             <form class="singUp-content">
-                <h1>Create an account</h1>
-                <div class="alert" role="alert">
-                    <!-- <i class="fas fa-exclamation-triangle me-3"></i> -->
-                    Please, write down this number and 9 words in the correct order!
+                <div class="content-header setting-free-header">
+                    <h3>Create an account</h3>
+                    <div class="alert" role="alert" data-mdb-color="primary">
+                        <p><i class="fas fa-exclamation-triangle me-3"></i> Please, write down this number <br /> and 9
+                            words in the correct order!</p>
+                    </div>
                 </div>
+
                 <div class="row mb-4">
                     <div class="col">
                         <div class="ring-1" id="loader-animation"></div>
-                        <div class="form-outline">
-                            <textarea class="form-control hide"
-                                id="generateCode">19 word1 word2 word3 word4 word5 word6 word7 word8 word9</textarea>
-                        </div>
+                        <h3 class="form-control hide" id="generateCode">19 word1 word2 word3 word4 <br/> word5 word6 word7
+                            word8 word9</h3>
                     </div>
                 </div>
 
@@ -47,7 +57,13 @@
                     <label class="form-check-label selected-semibold-text" for="agreeCheck">Yes, I write everything
                         down</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Sign up</button>
+                <a href="#">
+                    <button type="submit" class="btn btn-outline-info recover-btn d-flex align-items-center"
+                        data-mdb-ripple-color="dark">
+                        <i class="fa-solid fa-user-plus"></i>
+                        <span class="btn-text">Sign up</span>
+                    </button>
+                </a>
             </form>
         </div>
 
@@ -64,7 +80,7 @@
             document.getElementById('generateCode').classList.remove('hide')
             document.getElementById('loader-animation').classList.add('hide')
         }
-        setTimeout(addClass, 30000);
+        setTimeout(addClass, 3000);
     </script>
 
     <!-- https://www.freepik.com/free-vector/gradient-dynamic-blue-lines-background_15151445.htm#query=background&position=6&from_view=search&track=sph -->

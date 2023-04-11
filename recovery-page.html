@@ -25,8 +25,21 @@
 
 <body>
   <div class="singUp-main">
+    <div class="content">
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-cus-blue">
+          <div class="container">
+            <div class="d-flex align-items-center">
+              <a class="navbar-brand" href="#"><img class="p-2" src="img/logo.png" alt="195" /></a>
+            </div>
+          </div>
+        </nav>
+      </header>
     <form class="singUp-content">
-      <h1>Recover you account</h1>
+      <div class="content-header setting-free-header">
+        <h3>Account recovery</h3>
+      </div>
+      <br />
       <div class="form-outline">
         <input type="number" id="typeNumber" class="form-control" required />
         <label class="form-label" for="typeNumber">Number input</label>
@@ -88,8 +101,17 @@
           </div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Recover</button>
+      <br />
+        
+      <a href="recovery-page.html">
+        <button type="button" class="btn btn-outline-info recover-btn d-flex align-items-center"
+          data-mdb-ripple-color="dark">
+          <i class="fas fa-shield"></i>
+          <span class="btn-text">Recover</span>
+        </button>
+      </a>
     </form>
+    </div>
   </div>
 
 
