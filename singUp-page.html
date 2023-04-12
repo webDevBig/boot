@@ -45,7 +45,7 @@
                             <div class="stepper-head">
                                 <span class="stepper-head-icon">1</span>
                                 <span class="stepper-head-text">step1</span>
-                              </div>
+                            </div>
                             <div class="stepper-content">
                                 <div class="col">
                                     <h3 class="heading-2b">What is your gender?</h3>
@@ -116,8 +116,6 @@
                                             </select>
                                             <label class="form-label select-label">Day</label>
                                         </div>
-
-
                                         <div class="year-select">
                                             <select class="select">
                                                 <option value="" hidden selected></option>
@@ -142,32 +140,41 @@
                                         <label class="form-label" for="stepper-form-nickname">Name</label>
                                     </div>
                                 </div>
-                                <button id="step-2" class="btn btn-primary">Next<i class="fas fa-arrow-right"></i></button>
+                                <button id="step-2" class="btn btn-primary">Next<i
+                                        class="fas fa-arrow-right"></i></button>
                             </div>
                         </li>
                         <li class="stepper-step">
                             <div class="stepper-head">
                                 <span class="stepper-head-icon">2</span>
                                 <span class="stepper-head-text">step2</span>
-                              </div>
+                            </div>
                             <div class="stepper-content">
-                                <div class="col">
+                                <div class="col" id="phone-box">
                                     <h3 class="heading-2b">What is your phone number?</h3>
                                     <div class="form-outline mb-4">
-                                        <input type="number" id="form6Example6" class="form-control" required />
-                                        <label class="form-label" for="form6Example6">Phone</label>
+                                        <input type="number" id="phoneNumber" class="form-control" required />
+                                        <label class="form-label" for="phoneNumber">Phone</label>
                                         <div class="invalid-feedback">invalid</div>
                                     </div>
+                                    <button id="send" class="btn btn-primary">Send</button>
                                 </div>
-                                <div class="col">
+                                <div class="col hide" id="code-box">
                                     <h3 class="heading-2b">Write the text from the message</h3>
                                     <div class="form-outline mb-4">
-                                        <input type="text" id="form6Example6" class="form-control" />
-                                        <label class="form-label" for="form6Example6">Code from a message </label>
-                                        <div class="invalid-feedback">invalid</div>
+                                        <fieldset class='number-code'>
+                                            <div>
+                                              <input name='code' class='code-input form-control' required/>
+                                              <input name='code' class='code-input form-control' required/>
+                                              <input name='code' class='code-input form-control' required/>
+                                              <input name='code' class='code-input form-control' required/>
+                                            </div>
+                                          </fieldset>
                                     </div>
+                                    <button id="step-3" class="btn btn-primary">Next<i
+                                            class="fas fa-arrow-right"></i></button>
                                 </div>
-                                <button id="step-3" class="btn btn-primary">Next<i class="fas fa-arrow-right"></i></button>
+
                             </div>
 
                         </li>
@@ -175,7 +182,7 @@
                             <div class="stepper-head">
                                 <span class="stepper-head-icon">3</span>
                                 <span class="stepper-head-text">step3</span>
-                              </div>
+                            </div>
                             <div class="stepper-content">
                                 <div class="alert" role="alert" data-mdb-color="primary">
                                     <p><i class="fas fa-exclamation-triangle me-3"></i> Please, write down this number
@@ -236,6 +243,10 @@
             stepper.changeStep(2);
             setTimeout(addClass, 3000);
         });
+        document.getElementById('send').addEventListener('click', () => {
+            document.getElementById('code-box').classList.toggle('hide');
+            document.getElementById('phone-box').classList.toggle('hide')
+        });
 
         var gender_btn = document.querySelectorAll('.gender-btn');
         [].forEach.call(gender_btn, function (el) {
@@ -247,6 +258,7 @@
             }
         });
     </script>
+    <script src="js/validation-code.js"></script>
 
     <!-- https://www.freepik.com/free-vector/gradient-dynamic-blue-lines-background_15151445.htm#query=background&position=6&from_view=search&track=sph -->
 
