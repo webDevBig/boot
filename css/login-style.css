@@ -37,7 +37,7 @@
 .singUp-main #generateCode {
     font-family: "Segoe UI Regular";
     color: #666666;
-    font-size: 1.6rem;
+    font-size: 1.55rem;
     text-align: center;
     border: none;
 }
@@ -126,10 +126,10 @@
     color: #027bfe;
 }
 
-.singUp-content .stepper:not(.stepper-vertical) .stepper-step:not(:last-child) .stepper-head:after,
+/* .singUp-content .stepper:not(.stepper-vertical) .stepper-step:not(:last-child) .stepper-head:after,
 .singUp-content .stepper:not(.stepper-vertical) .stepper-step:not(:first-child) .stepper-head:before {
     display: none;
-}
+} */
 
 .stepper-active .stepper-content {
     display: flex !important;
@@ -177,6 +177,7 @@
 
 .singUp-content .stepper-content .step3-row .col {
     margin: 0;
+    padding: 0;
 }
 
 .singUp-content .month-select {
@@ -197,7 +198,13 @@
 .singUp-content .form-outline {
     position: relative;
 }
-
+.select-options-list {
+    padding: 0.375rem 0rem;
+}
+.singUp-content .stepper:not(.stepper-vertical) .stepper-step:first-child .stepper-head,
+.singUp-content .stepper:not(.stepper-vertical) .stepper-step:last-child .stepper-head{
+    padding: 0;
+}
 .singUp-content .fa-check {
     border-radius: 50%;
     background-color: #017bfd;
@@ -276,4 +283,13 @@
 
 .hide {
     display: none;
+}
+@media all and (max-width:400px){
+    .singUp-content .stepper-content .gender-btn {
+        min-width: auto;
+    }
+    .singUp-content .stepper:not(.stepper-vertical) .stepper-content{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 }
