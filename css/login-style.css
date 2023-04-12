@@ -69,7 +69,6 @@
 .singUp-content .col.hide {
     display: none;
 }
-
 .singUp-content #send {
     margin: 0 0 0 auto;
 }
@@ -133,11 +132,6 @@
     margin-right: 0.3rem !important;
     color: #027bfe;
 }
-
-/* .singUp-content .stepper:not(.stepper-vertical) .stepper-step:not(:last-child) .stepper-head:after,
-.singUp-content .stepper:not(.stepper-vertical) .stepper-step:not(:first-child) .stepper-head:before {
-    display: none;
-} */
 
 .stepper-active .stepper-content {
     display: flex !important;
@@ -286,7 +280,6 @@
     align-items: center;
     justify-content: space-between;
 }
-
 
 .ring-1 {
     width: 10px;
