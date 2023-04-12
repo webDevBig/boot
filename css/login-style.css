@@ -69,7 +69,8 @@
 .singUp-content .col.hide {
     display: none;
 }
-.singUp-content #send{
+
+.singUp-content #send {
     margin: 0 0 0 auto;
 }
 
@@ -153,7 +154,8 @@
     margin: 0;
     min-width: 100px;
 }
-.singUp-content .code-input{
+
+.singUp-content .code-input {
     border-radius: 0.25rem;
     border: 2px solid #017bfd;
     margin: 0 10px;
@@ -161,7 +163,12 @@
     padding: 0.32rem 0.75rem;
     text-align: center;
 }
-.number-code div{
+
+.singUp-content .iti {
+    width: 100%;
+}
+
+.number-code div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -316,5 +323,11 @@
     .singUp-content .stepper:not(.stepper-vertical) .stepper-content {
         padding-left: 0px;
         padding-right: 0px;
+    }
+}
+
+@media all and (max-width:340px) {
+    .singUp-main #generateCode br {
+        display: none;
     }
 }

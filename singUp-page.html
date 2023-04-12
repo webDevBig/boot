@@ -15,6 +15,8 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.3/build/css/intlTelInput.css">
+
     <!-- MDB -->
     <link rel="stylesheet" href="css/mdb.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -153,9 +155,9 @@
                                 <div class="col" id="phone-box">
                                     <h3 class="heading-2b">What is your phone number?</h3>
                                     <div class="form-outline mb-4">
-                                        <input type="number" id="phoneNumber" class="form-control" required />
-                                        <label class="form-label" for="phoneNumber">Phone</label>
-                                        <div class="invalid-feedback">invalid</div>
+                                        <input class="form-control tel" type="tel" name="leyka_donor_phone"
+                                            inputmode="tel" value="" id="phoneNumber" required />
+
                                     </div>
                                     <button id="send" class="btn btn-primary">Send</button>
                                 </div>
@@ -164,12 +166,12 @@
                                     <div class="form-outline mb-4">
                                         <fieldset class='number-code'>
                                             <div>
-                                              <input name='code' class='code-input form-control' required/>
-                                              <input name='code' class='code-input form-control' required/>
-                                              <input name='code' class='code-input form-control' required/>
-                                              <input name='code' class='code-input form-control' required/>
+                                                <input name='code' class='code-input form-control' required />
+                                                <input name='code' class='code-input form-control' required />
+                                                <input name='code' class='code-input form-control' required />
+                                                <input name='code' class='code-input form-control' required />
                                             </div>
-                                          </fieldset>
+                                        </fieldset>
                                     </div>
                                     <button id="step-3" class="btn btn-primary">Next<i
                                             class="fas fa-arrow-right"></i></button>
@@ -229,6 +231,15 @@
     <!-- Custom scripts -->
     <script type="text/javascript"></script>
 
+    <!-- fetch and Promise polyfills for IE11 -->
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js"></script> -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.0/js/intlTelInput.min.js"></script>
+
+
     <script>
         const stepper = new mdb.Stepper(document.getElementById('stepper-buttons'));
         document.getElementById('step-2').addEventListener('click', () => {
@@ -257,6 +268,38 @@
                 el.classList.toggle('active');
             }
         });
+
+        var input = document.querySelector("#phoneNumber");
+        var iti = window.intlTelInput(input, {
+            separateDialCode: true,
+            initialCountry: "auto",
+            geoIpLookup: function (callback) {
+                fetch("https://ipapi.co/json")
+                    .then(function (res) {
+                        return res.json();
+                    })
+                    .then(function (data) {
+                        callback(data.country_code);
+                    })
+                    .catch(function () {
+                        callback("us");
+                    });
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.0/js/utils.js" // just for formatting/placeholders etc
+        });
+        document.querySelector('body').addEventListener('keyup', function (event) {
+            if (event.target.classList.contains('tel')) {
+                var input = event.target;
+                var value = input.value;
+                var length = value.length;
+                var inputCharacter = parseInt(value.slice(-1));
+                if (!((length > 1 && inputCharacter >= 0 && inputCharacter <= 9) || (length === 1 &&
+                        inputCharacter >= 7 && inputCharacter <= 9))) {
+                    input.value = value.substring(0, length - 1);
+                }
+            }
+        });
+   
     </script>
     <script src="js/validation-code.js"></script>
 
