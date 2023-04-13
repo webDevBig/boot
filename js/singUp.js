@@ -45,16 +45,16 @@ var iti = window.intlTelInput(input, {
     },
     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.0/js/utils.js" // just for formatting/placeholders etc
 });
-// document.querySelector('body').addEventListener('keyup', function (event) {
-//     if (event.target.classList.contains('tel')) {
-//         var input = event.target;
-//         var value = input.value;
-//         var length = value.length;
-//         var inputCharacter = parseInt(value.slice(-1));
-//         if (!((length > 1 && inputCharacter >= 0 && inputCharacter <= 9) || (length === 1 &&
-//                 inputCharacter >= 7 && inputCharacter <= 9))) {
-//             input.value = value.substring(0, length - 1);
-//         }
-//     }
-// });
+document.querySelector('body').addEventListener('keyup', function (event) {
+    if (event.target.classList.contains('tel')) {
+        var input = event.target;
+        var value = input.value;
+        var length = value.length;
+        var inputCharacter = parseInt(value.slice(-1));
+        if (!((length > 1 && inputCharacter >= 0 && inputCharacter <= 9) || (
+                inputCharacter >= 0 && inputCharacter <= 9))) {
+            input.value = value.substring(0, length - 1);
+        }
+    }
+});
 
