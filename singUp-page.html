@@ -49,6 +49,34 @@
                                 <span class="stepper-head-text">step1</span>
                             </div>
                             <div class="stepper-content">
+                                <div class="clm client_account">
+                                    <h3 class="heading-2b">Are you a</h3>
+                                    <div class="row">
+                                        <div class="form-check">
+                                            <input class="form-check-input radio-input" type="radio"
+                                                name="flexRadioDefault" id="flexRadioDefault1" />
+                                            <label class="form-check-label" for="flexRadioDefault1">Client </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input radio-input" type="radio"
+                                                name="flexRadioDefault" id="flexRadioDefault2" checked />
+                                            <label class="form-check-label" for="flexRadioDefault2">Customer </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col race-col">
+                                    <h3 class="heading-2b">What is your race?</h3>
+                                    <div class="row">
+                                        <select class="select ">
+                                            <option value="" hidden selected></option>
+                                            <option value="1">Black</option>
+                                            <option value="2">White</option>
+                                            <option value="3">Indian</option>
+                                        </select>
+                                        <label class="form-label select-label">Race</label>
+                                    </div>
+                                </div>
                                 <div class="col">
                                     <h3 class="heading-2b">What is your gender?</h3>
                                     <div class="row">
@@ -236,6 +264,21 @@
 
     <script src="js/singUp.js"></script>
     <script src="js/validation-code.js"></script>
+
+    <script>
+        const radio = document.querySelectorAll('.radio-input');
+
+        [].forEach.call(radio, function (el) {
+            el.onclick = function (e) {
+                if (document.getElementById('flexRadioDefault1').checked) {
+                    console.log("yes");
+                    document.querySelector('.race-col').classList.add('hide')
+                } else {
+                    document.querySelector('.race-col').classList.remove('hide')
+                }
+            }
+        });
+    </script>
 
     <!-- https://www.freepik.com/free-vector/gradient-dynamic-blue-lines-background_15151445.htm#query=background&position=6&from_view=search&track=sph -->
 

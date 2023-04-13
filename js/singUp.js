@@ -56,5 +56,9 @@ document.querySelector('body').addEventListener('keyup', function (event) {
             input.value = value.substring(0, length - 1);
         }
     }
+  
 });
+
+
+
 

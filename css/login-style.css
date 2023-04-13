@@ -1,6 +1,6 @@
 .singUp-main {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,6 +14,7 @@
 .singUp-main .content {
     max-width: 450px;
     width: 100%;
+    overflow-x: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -23,6 +24,7 @@
 
 .singUp-main header {
     width: 100%;
+    /* min-height: 59px; */
 }
 
 .singUp-main p {
@@ -69,6 +71,7 @@
 .singUp-content .col.hide {
     display: none;
 }
+
 .singUp-content #send {
     margin: 0 0 0 auto;
 }
@@ -207,12 +210,15 @@
 }
 
 .singUp-content .day-select {
-    width: 20%;
+    width: 25%;
     padding: 0;
+}
+.iti-mobile .select-dropdown{
+    min-width: 75px;
 }
 
 .singUp-content .year-select {
-    width: 30%;
+    width: 25%;
     padding: 0;
 }
 
@@ -308,6 +314,36 @@
     display: none;
 }
 
+.client_account .heading-2b {
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+.singUp-content .stepper-content .client_account .row{
+    justify-content: center;
+    margin: 0;
+}
+.client_account .form-check {
+    width: auto;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 0.75em 0 0;
+}
+
+.client_account .form-check-input[type=radio]:checked:after {
+    left: 5px;
+    top: 5px;
+    /* margin: 0 10px; */
+}
+.client_account .form-check-input[type=radio] {
+    margin: 0 0.75em;
+    padding: 0;
+}
+.singUp-content .select-wrapper{
+    padding: 0;
+}
+
 @media all and (max-width:400px) {
     .singUp-content .stepper-content .gender-btn {
         min-width: auto;
@@ -319,7 +355,7 @@
     }
 }
 
-@media all and (max-width:340px) {
+@media all and (max-width:360px) {
     .singUp-main #generateCode br {
         display: none;
     }
